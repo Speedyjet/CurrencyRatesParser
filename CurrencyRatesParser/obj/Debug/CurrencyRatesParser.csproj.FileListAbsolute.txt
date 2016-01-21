@@ -29,7 +29,8 @@ C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\De
 C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\Fizzler.Systems.HtmlAgilityPack.xml
 C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\HtmlAgilityPack.xml
-C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.csprojResolveAssemblyReference.cache
 C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.Form1.resources
 C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.Properties.Resources.resources
 C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.csproj.GenerateResource.Cache
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\CurrencyRatesParser.exe.config
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.csprojResolveAssemblyReference.cache
