@@ -16,3 +16,20 @@ c:\users\олег\documents\visual studio 2015\Projects\CurrencyRatesParser\Curr
 c:\users\олег\documents\visual studio 2015\Projects\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.csproj.GenerateResource.Cache
 c:\users\олег\documents\visual studio 2015\Projects\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.exe
 c:\users\олег\documents\visual studio 2015\Projects\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.pdb
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.exe
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.pdb
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\CurrencyRatesParser.exe
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\CurrencyRatesParser.pdb
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\Fizzler.dll
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\Fizzler.Systems.HtmlAgilityPack.dll
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\HtmlAgilityPack.dll
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\LinqBridge.dll
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\Fizzler.xml
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\Fizzler.Systems.HtmlAgilityPack.xml
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\bin\Debug\HtmlAgilityPack.xml
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.csprojResolveAssemblyReference.cache
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.Form1.resources
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.Properties.Resources.resources
+C:\Users\it.test\Documents\GitHub\CurrencyRatesParser\CurrencyRatesParser\obj\Debug\CurrencyRatesParser.csproj.GenerateResource.Cache
