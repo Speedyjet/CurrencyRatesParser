@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -39,25 +40,20 @@ namespace CurrencyRatesParser
             var ObjWorkSheet = (Worksheet) ObjWorkBook.Sheets[1];
             objExcel.Visible = true;
             objExcel.UserControl = true;
-            ObjWorkSheet.Cells[2, 1] = "Дата";
-            ObjWorkSheet.Cells[2, 2] = "Валюта";
-            ObjWorkSheet.Cells[1, 3] = "09:30 - 11.00";
-            ObjWorkSheet.Cells[2, 3] = "Покупка";
-            ObjWorkSheet.Cells[2, 4] = "Продажа";
-            ObjWorkSheet.Cells[1, 5] = "11:00 - 16.00";
-            ObjWorkSheet.Cells[2, 5] = "Покупка";
-            ObjWorkSheet.Cells[2, 6] = "Продажа";
-            ObjWorkSheet.Cells[1, 7] = "С 16:00";
-            ObjWorkSheet.Cells[2, 7] = "Покупка";
-            ObjWorkSheet.Cells[2, 8] = "Продажа";
+            ObjWorkSheet.Cells[1, 1] = "Дата";
+            ObjWorkSheet.Cells[1, 2] = "Валюта";
+            ObjWorkSheet.Cells[1, 3] = "Курс Казкоммерцбанк";
+            ObjWorkSheet.Cells[1, 4] = "курс Национальный Банк РК";
+            ObjWorkSheet.Cells[1, 5] = "Единицы";
             var today = DateTime.Today;
-            var firstDay = DateTime.Parse(Convert.ToString(dateTimePicker1.Value, CultureInfo.CurrentCulture)).Date;
-            var j = 2;
+            var firstDay = DateTime.Parse("12.01.2015").Date;
+            var j = 1;
             var client = new WebClient { Encoding = Encoding.UTF8 };
            
             var document = new HtmlAgilityPack.HtmlDocument();
             try
             {
+
                 for (var i = firstDay; i <= today; i = i.AddDays(1))
                 {
                     var reply =
@@ -66,29 +62,7 @@ namespace CurrencyRatesParser
                     i.Year);
                     document.LoadHtml(reply);
 
-                    if (i<DateTime.Parse("10.1.2015"))
-                    {
-                        var nodes = document.DocumentNode.QuerySelectorAll("table.tbl_text2 tr");
-                        var table =
-                            nodes.Select(x => x.QuerySelectorAll("td").Select(y => y.InnerText).ToArray())
-                        .Skip(5)
-                        .Take(23);
-
-                        foreach (var row in table.Where(row => row[0].StartsWith("1 ")))
-                        {
-                            j += 1;
-                            ObjWorkSheet.Cells[j, 1] = i;
-                            ObjWorkSheet.Cells[j, 2] = row[0];
-                            ObjWorkSheet.Cells[j, 3] = row[1];
-                            ObjWorkSheet.Cells[j, 4] = row[2];
-                            ObjWorkSheet.Cells[j, 5] = row[3];
-                            ObjWorkSheet.Cells[j, 6] = row[4];
-                            ObjWorkSheet.Cells[j, 7] = row[5];
-                            ObjWorkSheet.Cells[j, 8] = row[6];
-                        }
-                    }
-                    else
-                    {
+                    
                         var nodes = document.DocumentNode.QuerySelectorAll("table.tbl_text2 tr");
                         var table = nodes.Select(x => x.QuerySelectorAll("td").Select(y => y.InnerText).ToArray()).Skip(11);
 
@@ -96,25 +70,23 @@ namespace CurrencyRatesParser
                         {
                             j += 1;
                             ObjWorkSheet.Cells[j, 1] = i;
-                            ObjWorkSheet.Cells[j, 2] = row[0].PadRight(30);
-                            ObjWorkSheet.Cells[j, 3] = row[1];
-                            ObjWorkSheet.Cells[j, 4] = row[2];
-                            ObjWorkSheet.Cells[j, 5] = row[3].Replace("&nbsp;", "").PadLeft(10);
-                            ObjWorkSheet.Cells[j, 6] = row[4];
-                            ObjWorkSheet.Cells[j, 7] = row[5];
-                            ObjWorkSheet.Cells[j, 8] = row[6];
-
-                            //Console.WriteLine("{0}: {1}", row[0].PadRight(30), row[3].Replace("&nbsp;", "").PadLeft(10));
+                            ObjWorkSheet.Cells[j, 2] = row[0].PadRight(30); //Код валюты
+                            ObjWorkSheet.Cells[j, 3] = row[3].Replace("&nbsp;", "").PadLeft(10);//Курс Казкоммерцбанк   //3] = row[1]; //единицы
+                            objExcel.Cells[j, 4] = row[6].Replace("&nbsp;", "").PadLeft(10);//row[5]; //курс Национальный Багк РК
+                            ObjWorkSheet.Cells[j, 5] = row[4];
                         }
                     }
-                    
-                }
-
-            }
-            catch (Exception ex)
+            }catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+            objExcel.Application.Quit();
+            Process[] ps2 = System.Diagnostics.Process.GetProcessesByName("EXCEL");
+            foreach (Process p2 in ps2)
+            {
+                p2.Kill();
+            }
+
         }
     }
 }
